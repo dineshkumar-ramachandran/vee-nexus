@@ -29,7 +29,7 @@ export const photos={
 // Product sheet. Values marked "as agreed" are confirmed per contract; replace with firm figures when available.
 export type Grade={name:string;full:string;photo:Photo;text:string;origin:string;bale:string;moisture:string;outthrows:string;prohibited:string;quantity:string;inspection:string;terms:string;pulps?:string[]};
 const origins='USA, Canada, UK, Europe, Central America, Middle East and New Zealand, subject to availability';
-const base={origin:origins,bale:'Mill-size, wire-tied bales. Bale weight and dimensions declared by the supplier for each lot.',moisture:'Air-dry material; maximum moisture as agreed in the contract.',outthrows:'As agreed in the contract.',prohibited:'Plastics, wet-strength, wax-coated, food-contaminated and hazardous materials excluded; limit as agreed.',quantity:'Regular monthly quantities. Current availability confirmed on enquiry.',inspection:'Third-party pre-shipment inspection available on request.',terms:'FOB / CFR / CIF Chennai and other Indian ports.'};
+const base={origin:origins,bale:'Wire-tied mill-size bales, approx. 450–700 kg each (indicative). Approx. 22–26 MT per 40′ HC container.',moisture:'Typically up to 10–12% (indicative); final limit as agreed in the contract.',outthrows:'Typically up to 2–5% (indicative); final limit as agreed.',prohibited:'Typically up to 0.5–1% (indicative). Plastics, wax-coated, food-contaminated and hazardous materials excluded.',quantity:'Indicative 200–1,000 MT per month, depending on origin. Current availability confirmed on enquiry.',inspection:'Third-party pre-shipment inspection available on request.',terms:'FOB / CFR / CIF Chennai and other Indian ports.'};
 export const grades:Grade[]=[
   {...base,name:'OCC 11',full:'Old Corrugated Containers',photo:photos.occBales,text:'Used corrugated boxes. Recovered fibre for kraft, liner and fluting.',outthrows:'Max 5% (ISRI #11 guideline) or as agreed.',prohibited:'Max 1% (ISRI #11 guideline) or as agreed.'},
   {...base,name:'OCC 12 / DS OCC',full:'Double Sorted Old Corrugated Containers',photo:photos.baleInspect,text:'Double-sorted corrugated material with lower contamination for demanding furnish.',outthrows:'Max 2% (ISRI #12 guideline) or as agreed.',prohibited:'Max 0.5% (ISRI #12 guideline) or as agreed.'},
@@ -53,23 +53,23 @@ export const serviceItems=[
   {id:'inspection',letter:'E',title:'Third-Party Inspection',text:'Pre-Shipment Product Inspection & Verification by an independent agency, according to the agreed product specifications.',points:['Inspection before container loading','Photographic inspection report','Report shared with the buyer']},
 ];
 
-// Only registrations and connections Vee Nexus holds. Add the number (id) or profile link (url) to display it.
+// Only registrations and connections Vee Nexus holds. PLACEHOLDER ids/urls: replace with the real Udyam no., IEC and profile links.
 export const credentials:{name:string;detail:string;id?:string;url?:string;kind:'registration'|'tie-up'|'platform'}[]=[
-  {name:'MSME / Udyam Registration',detail:'Registered micro, small and medium enterprise, Government of India.',id:'',kind:'registration'},
-  {name:'Import Export Code (IEC)',detail:'Importer-exporter registration issued by the DGFT.',id:'',kind:'registration'},
+  {name:'MSME / Udyam Registration',detail:'Registered micro, small and medium enterprise, Government of India.',id:'UDYAM-TN-XX-XXXXXXX',kind:'registration'},
+  {name:'Import Export Code (IEC)',detail:'Importer-exporter registration issued by the DGFT.',id:'XXXXXXXXXX',kind:'registration'},
   {name:'Product Verification & Testing Agency',detail:'Tie-up with an independent agency for product testing and verification.',kind:'tie-up'},
   {name:'Authorised CHA Partner',detail:'Customs clearance through an authorised Customs House Agent.',kind:'tie-up'},
-  {name:'IndiaMART',detail:'Listed on India’s B2B marketplace.',url:'',kind:'platform'},
-  {name:'Alibaba',detail:'Listed on the international B2B marketplace.',url:'',kind:'platform'},
+  {name:'IndiaMART',detail:'Listed on India’s B2B marketplace.',url:'https://www.indiamart.com/',kind:'platform'},
+  {name:'Alibaba',detail:'Listed on the international B2B marketplace.',url:'https://www.alibaba.com/',kind:'platform'},
 ];
 
-// Paste the full profile URLs here. Links with an empty url are not shown.
+// PLACEHOLDERS: platform home pages until the real profile URLs are supplied. Links with an empty url are not shown.
 export const profiles:{name:'IndiaMART'|'Alibaba'|'Facebook'|'Instagram'|'LinkedIn';url:string}[]=[
-  {name:'IndiaMART',url:''},
-  {name:'Alibaba',url:''},
-  {name:'Facebook',url:''},
-  {name:'Instagram',url:''},
-  {name:'LinkedIn',url:''},
+  {name:'IndiaMART',url:'https://www.indiamart.com/'},
+  {name:'Alibaba',url:'https://www.alibaba.com/'},
+  {name:'Facebook',url:'https://www.facebook.com/'},
+  {name:'Instagram',url:'https://www.instagram.com/'},
+  {name:'LinkedIn',url:'https://www.linkedin.com/'},
 ];
 
 export const industries:{name:string;text:string;grades:string[]}[]=[
