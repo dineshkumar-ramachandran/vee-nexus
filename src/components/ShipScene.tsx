@@ -30,14 +30,12 @@ function Ship({ className }: { className: string }) {
       <rect x="38" y="40" width="78" height="80" rx="2" fill="#f4f6f1"/>
       <rect x="32" y="40" width="90" height="7" fill="#dfe7d6"/>
       {[52, 70, 88].map(y => <rect key={y} x="44" y={y} width="66" height="7" fill="#123e2b" opacity=".85"/>)}
-      <path d="M514 76 v-40 M506 44 h16" stroke="#dfe7d6" strokeWidth="3"/>
       {containers.map((c, i) => <g key={i}><rect x={c.x} y={c.y} width="36" height="20" fill={c.fill}/><path d={`M${c.x + 9} ${c.y + 3}v14M${c.x + 18} ${c.y + 3}v14M${c.x + 27} ${c.y + 3}v14`} stroke="#032c20" strokeOpacity=".18"/></g>)}
       <path d="M8 118 H572 L598 110 L574 186 H52 Q20 186 12 150 Z" fill="#0d261c"/>
       <path d="M17 160 H588 L574 186 H52 Q26 186 17 160 Z" fill="#a8432d"/>
       <path d="M8 118 H572 L598 110 L596 116 H10 Z" fill="#c6dc9d"/>
       <text x="310" y="145" fill="#f4f6f1" fontSize="12.5" fontFamily="Manrope, sans-serif" fontWeight="700" letterSpacing="2.4" textAnchor="middle">VEE NEXUS GLOBAL RESOURCE</text>
     </g>
-    <path className="ship-bow-wave" d="M560 172 q20 -6 36 -2 q-14 10 -40 12 Z" fill="#f4f6f1"/>
   </svg>;
 }
 
@@ -52,7 +50,7 @@ function Ocean() {
     <svg className="wave wave-far" viewBox="0 0 3200 420" preserveAspectRatio="none" aria-hidden="true"><path d={wave(40, 10)}/></svg>
     <Ship className="ship ship-distant"/>
     <svg className="wave wave-mid" viewBox="0 0 3200 420" preserveAspectRatio="none" aria-hidden="true"><path d={wave(70, 14)}/></svg>
-    <div className="ship-track"><Ship className="ship ship-main"/><span className="ship-wake"/></div>
+    <div className="ship-track"><Ship className="ship ship-main"/></div>
     <svg className="wave wave-near" viewBox="0 0 3200 420" preserveAspectRatio="none" aria-hidden="true"><path d={wave(118, 16)}/></svg>
     <svg className="wave wave-front" viewBox="0 0 3200 420" preserveAspectRatio="none" aria-hidden="true"><path d={wave(170, 12)}/></svg>
   </div>;

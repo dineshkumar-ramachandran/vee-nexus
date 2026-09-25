@@ -15,8 +15,6 @@
 .ship-smoke circle{fill:#dfe7d6;opacity:0;transform-box:fill-box;transform-origin:center;animation:smoke 4.5s ease-out infinite}
 .ship-smoke circle:nth-child(2){animation-delay:1.5s}
 .ship-smoke circle:nth-child(3){animation-delay:3s}
-.ship-bow-wave{animation:bow-wave 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:left center}
-.ship-wake{position:absolute;right:88%;top:84%;width:140%;height:5px;border-radius:5px;background:linear-gradient(to left,#f4f6f190,#f4f6f100);opacity:.7}
 .ship-controls{position:absolute;right:6%;top:-10px;bottom:auto;pointer-events:auto}
 .ship-scene.is-paused *{animation-play-state:paused!important}
 @keyframes wave-drift{from{transform:translateX(0)}to{transform:translateX(-50%)}}
@@ -24,7 +22,6 @@
 @keyframes sail-back{from{transform:translateX(100vw) scaleX(-1)}to{transform:translateX(-120%) scaleX(-1)}}
 @keyframes bob{0%,100%{transform:translateY(0) rotate(-.7deg)}50%{transform:translateY(3px) rotate(.7deg)}}
 @keyframes smoke{0%{opacity:0;transform:translate(0,0) scale(.5)}25%{opacity:.35}100%{opacity:0;transform:translate(-26px,-22px) scale(1.6)}}
-@keyframes bow-wave{0%,100%{transform:scaleX(1);opacity:.75}50%{transform:scaleX(1.25);opacity:1}}
 .hero h1{text-shadow:0 2px 30px #073d2b99}
 
 /* Photo gallery */
